@@ -23,9 +23,23 @@ function App() {
   },[len,numAllow,charAllow,setPassword])
   return (
     <>
-     <div className=''></div>
+     <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 bg-gray-600'>
+      <h3 className='text-white'>Password Generator</h3>
+      <div className='flex shadow rounded-lg overflow-hidden mb-4'>
+        <input type="text" value={password} placeholder="Password" readonly className='bg-white'/>
+        <button className="outline-none bg-green-700 ">Copy</button>
+      </div>
+
+      <div className='flex text-sm gap-x-2'>
+        <div className='flex items-center gapx-x-1'>
+          <input type="range" min={6} max={100} calue={len} className='cursor-pointer'/>
+        </div>
+      </div>
+
+     </div>
     </>
   )
 }
 
-export default App
+export default App;
+ 
